@@ -12,7 +12,7 @@ import GoogleMaps
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let googleApiKey = "AIzaSyB1JhaHTdYC0qoNa2hQLP1DIncrIX6AUnM";
+    let googleApiKey = "<place your google api key here>";
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

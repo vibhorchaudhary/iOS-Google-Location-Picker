@@ -20,6 +20,8 @@ class ViewController: BaseViewController, CLLocationManagerDelegate, GMSMapViewD
     
     @IBOutlet var cardView: CardView!
     
+    @IBOutlet var movePinToAdjustLabel: UILabel!
+    
     private var mLocationHelper: LocationHelper = LocationHelper()
     
     private var didMapViewChangeCalled = false
@@ -86,6 +88,7 @@ class ViewController: BaseViewController, CLLocationManagerDelegate, GMSMapViewD
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         didMapViewChangeCalled = true
         cardView.isHidden = true
+        movePinToAdjustLabel.isHidden = true
     }
     
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
@@ -105,9 +108,15 @@ class ViewController: BaseViewController, CLLocationManagerDelegate, GMSMapViewD
             debugPrint(userAddressString)
             self.userAddressLabel.text = userAddressString
             self.cardView.isHidden = false
+            self.movePinToAdjustLabel.isHidden = false
+            self.movePinToAdjustLabel.textColor = UIColor.white
+            self.movePinToAdjustLabel.layer.cornerRadius = 5
+            self.movePinToAdjustLabel.layer.masksToBounds = true
+            self.movePinToAdjustLabel.layer.backgroundColor = UIColor.black.cgColor
             UIView.animate(withDuration: 0.25) {
                 self.view.layoutIfNeeded()
             }
         }
     }
+    // Google Maps Methods end
 }

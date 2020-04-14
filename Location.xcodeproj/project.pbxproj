@@ -20,6 +20,7 @@
 		515512072445900D00CC30E9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515512062445900D00CC30E9 /* BaseViewController.swift */; };
 		515512092445B41F00CC30E9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515512082445B41F00CC30E9 /* CardView.swift */; };
 		5155120B2445B87200CC30E9 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5155120A2445B87200CC30E9 /* PaddingLabel.swift */; };
+		5155120D2445BF4E00CC30E9 /* PaddingLabelSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5155120C2445BF4E00CC30E9 /* PaddingLabelSmall.swift */; };
 		F523B20F82D461C0F6260B79 /* Pods_Location_LocationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242946617E2C017BD18334B2 /* Pods_Location_LocationUITests.framework */; };
 		F77E460EC779AD9ED5ECD097 /* Pods_LocationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E82D142451CDAE90ED45376 /* Pods_LocationTests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		515512062445900D00CC30E9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		515512082445B41F00CC30E9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		5155120A2445B87200CC30E9 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		5155120C2445BF4E00CC30E9 /* PaddingLabelSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabelSmall.swift; sourceTree = "<group>"; };
 		60F2BED7014D8B0070E76A33 /* Pods-Location-LocationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Location-LocationUITests.release.xcconfig"; path = "Target Support Files/Pods-Location-LocationUITests/Pods-Location-LocationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		679649FD9AC71A16FEA9AD4B /* Pods-LocationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationTests.release.xcconfig"; path = "Target Support Files/Pods-LocationTests/Pods-LocationTests.release.xcconfig"; sourceTree = "<group>"; };
 		684D2A7ECFE53143E238C7F3 /* Pods-Location.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Location.release.xcconfig"; path = "Target Support Files/Pods-Location/Pods-Location.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,16 +126,13 @@
 		515511D324450E0500CC30E9 /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				515512112445C71D00CC30E9 /* storyboards */,
+				515512102445C70700CC30E9 /* viewControllers */,
+				5155120F2445C6EB00CC30E9 /* helpers */,
+				5155120E2445C6D600CC30E9 /* customViews */,
 				515511D424450E0500CC30E9 /* AppDelegate.swift */,
-				5155120424450E3400CC30E9 /* LocationHelper.swift */,
 				515511D624450E0500CC30E9 /* SceneDelegate.swift */,
-				515512082445B41F00CC30E9 /* CardView.swift */,
-				5155120A2445B87200CC30E9 /* PaddingLabel.swift */,
-				515511D824450E0500CC30E9 /* ViewController.swift */,
-				515511DA24450E0500CC30E9 /* Main.storyboard */,
-				515512062445900D00CC30E9 /* BaseViewController.swift */,
 				515511DD24450E0600CC30E9 /* Assets.xcassets */,
-				515511DF24450E0600CC30E9 /* LaunchScreen.storyboard */,
 				515511E224450E0600CC30E9 /* Info.plist */,
 			);
 			path = Location;
@@ -155,6 +154,42 @@
 				515511F824450E0600CC30E9 /* Info.plist */,
 			);
 			path = LocationUITests;
+			sourceTree = "<group>";
+		};
+		5155120E2445C6D600CC30E9 /* customViews */ = {
+			isa = PBXGroup;
+			children = (
+				515512082445B41F00CC30E9 /* CardView.swift */,
+				5155120A2445B87200CC30E9 /* PaddingLabel.swift */,
+				5155120C2445BF4E00CC30E9 /* PaddingLabelSmall.swift */,
+			);
+			path = customViews;
+			sourceTree = "<group>";
+		};
+		5155120F2445C6EB00CC30E9 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5155120424450E3400CC30E9 /* LocationHelper.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		515512102445C70700CC30E9 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				515511D824450E0500CC30E9 /* ViewController.swift */,
+				515512062445900D00CC30E9 /* BaseViewController.swift */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		515512112445C71D00CC30E9 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				515511DA24450E0500CC30E9 /* Main.storyboard */,
+				515511DF24450E0600CC30E9 /* LaunchScreen.storyboard */,
+			);
+			path = storyboards;
 			sourceTree = "<group>";
 		};
 		77A6AB97632510BF756D23A0 /* Pods */ = {
@@ -421,6 +456,7 @@
 			files = (
 				515512072445900D00CC30E9 /* BaseViewController.swift in Sources */,
 				5155120B2445B87200CC30E9 /* PaddingLabel.swift in Sources */,
+				5155120D2445BF4E00CC30E9 /* PaddingLabelSmall.swift in Sources */,
 				5155120524450E3400CC30E9 /* LocationHelper.swift in Sources */,
 				515511D924450E0500CC30E9 /* ViewController.swift in Sources */,
 				515511D524450E0500CC30E9 /* AppDelegate.swift in Sources */,

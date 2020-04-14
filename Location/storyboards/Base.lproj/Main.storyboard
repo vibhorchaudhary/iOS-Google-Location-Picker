@@ -38,25 +38,45 @@
                                     <constraint firstItem="jju-e3-8hG" firstAttribute="width" secondItem="k8i-6V-0K1" secondAttribute="width" id="yVm-Wd-z59"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pRa-7K-ilM">
-                                <rect key="frame" x="189.5" y="427.5" width="35" height="40"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqF-kE-7ub">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mappin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pRa-7K-ilM">
+                                        <rect key="frame" x="102.5" y="43.5" width="35" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="SnU-gl-vGU"/>
+                                            <constraint firstAttribute="height" constant="40" id="cKo-PL-Akn"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Move pin to adjust" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOn-7y-72l" customClass="PaddingLabelSmall" customModule="Location" customModuleProvider="target">
+                                        <rect key="frame" x="75.5" y="86" width="89" height="12"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="SnU-gl-vGU"/>
-                                    <constraint firstAttribute="height" constant="40" id="cKo-PL-Akn"/>
+                                    <constraint firstItem="pRa-7K-ilM" firstAttribute="centerX" secondItem="dqF-kE-7ub" secondAttribute="centerX" id="IXg-Or-1op"/>
+                                    <constraint firstItem="xOn-7y-72l" firstAttribute="top" secondItem="pRa-7K-ilM" secondAttribute="bottom" id="b1R-T0-S5c"/>
+                                    <constraint firstItem="pRa-7K-ilM" firstAttribute="centerY" secondItem="dqF-kE-7ub" secondAttribute="centerY" id="xLR-Ew-DKt"/>
+                                    <constraint firstItem="xOn-7y-72l" firstAttribute="centerX" secondItem="dqF-kE-7ub" secondAttribute="centerX" id="xSO-Nf-ODN"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="dqF-kE-7ub" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="16x-Ua-HdZ"/>
+                            <constraint firstItem="dqF-kE-7ub" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3Qx-jK-Chy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ySC-IL-eih" secondAttribute="trailing" id="5MU-y8-dFf"/>
                             <constraint firstItem="ySC-IL-eih" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5Uw-gn-26y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ySC-IL-eih" secondAttribute="bottom" id="CaD-jj-AZJ"/>
                             <constraint firstItem="ySC-IL-eih" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KBD-nD-ZeH"/>
-                            <constraint firstItem="pRa-7K-ilM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LKG-54-OzU"/>
-                            <constraint firstItem="pRa-7K-ilM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VR7-Lk-K5n"/>
+                            <constraint firstItem="dqF-kE-7ub" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OqO-pv-t7G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k8i-6V-0K1" secondAttribute="trailing" constant="20" id="ZdN-0p-Rdy"/>
                             <constraint firstItem="k8i-6V-0K1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="cws-4y-oJQ"/>
                             <constraint firstItem="k8i-6V-0K1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gJV-5P-r4j"/>
+                            <constraint firstItem="dqF-kE-7ub" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pQ9-hi-mGK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -65,6 +85,7 @@
                         <outlet property="cardView" destination="k8i-6V-0K1" id="kZL-MB-Bce"/>
                         <outlet property="googleMaps" destination="ySC-IL-eih" id="wT9-uD-Lf0"/>
                         <outlet property="mapPinIv" destination="pRa-7K-ilM" id="gwW-1N-zJG"/>
+                        <outlet property="movePinToAdjustLabel" destination="xOn-7y-72l" id="oIe-Wa-WxM"/>
                         <outlet property="userAddressLabel" destination="jju-e3-8hG" id="5Xo-JU-r7A"/>
                     </connections>
                 </viewController>
